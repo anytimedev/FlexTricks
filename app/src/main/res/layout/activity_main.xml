@@ -1,13 +1,165 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:ads="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/edttAlcool"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:textSize="15sp"
+        android:layout_below="@+id/txtvAlcool"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/edttGasolina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:textSize="15sp"
+        android:layout_below="@+id/txtvGasolina"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Álcool"
+        android:id="@+id/txtvAlcool"
+        android:textSize="15sp"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:layout_alignBaseline="@+id/txtvA"
+        android:layout_alignBottom="@+id/txtvA"
+        android:layout_toEndOf="@+id/txtvA" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gasolina"
+        android:id="@+id/txtvGasolina"
+        android:textSize="15sp"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:layout_alignBaseline="@+id/txtvG"
+        android:layout_alignBottom="@+id/txtvG"
+        android:layout_toEndOf="@+id/txtvG" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calcular"
+        android:id="@+id/txtvCalcular"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="5dp"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_background"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/txtvCompensacao"
+        android:layout_above="@+id/txtvCalcular"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginBottom="32dp" />
+
+    <RelativeLayout
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/microView"
+        android:background="@drawable/background_microphone"
+        android:layout_alignTop="@+id/edttAlcool"
+        android:layout_toEndOf="@+id/edttAlcool">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:src="@drawable/microphone"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/microView2"
+        android:background="@drawable/background_microphone"
+        android:layout_alignTop="@+id/edttGasolina"
+        android:layout_toEndOf="@+id/edttGasolina">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView2"
+            android:src="@drawable/microphone"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtvA"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:text="A"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:background="@drawable/alcool_button"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtvG"
+        android:text="G"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:background="@drawable/gas_button"
+        android:layout_below="@+id/edttAlcool"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/alcoolView"
+        android:text="A"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:background="@drawable/alcool_button"
+        android:layout_alignBottom="@+id/txtvCompensacao"
+        android:layout_toEndOf="@+id/txtvCompensacao"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gasView"
+        android:text="G"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:background="@drawable/gas_button"
+        android:layout_alignBottom="@+id/txtvCompensacao"
+        android:layout_toEndOf="@+id/txtvCompensacao"
+        android:layout_marginLeft="10dp" />
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
